@@ -22,3 +22,11 @@
 .weak-text {
     color: gray;
 }
+
+.calc input[type="number"] {
+    width: 2.5em;
+}
+
+.set-result input[type="number"] {
+    width: 6.5em;
+}
