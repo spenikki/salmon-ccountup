@@ -1,0 +1,24 @@
+.table-simple {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 1em;
+}
+
+.table-simple th {
+    width: 80px;
+    padding: 4px 12px;
+    background: #28b965;
+    border: solid 1px #778ca3;
+}
+
+.table-simple td {
+    width: 80px;
+    padding: 4px 12px;
+    border: solid 1px #778ca3;
+}
+
+.weak-text {
+    color: gray;
+}

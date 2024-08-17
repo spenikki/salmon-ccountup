@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./style/main.css"/>
+    </head>
+    <body>
+
+        <h1>オオモノ耐久用計算機</h1>
+
+        <h2>今回の成果</h2>
+        <dl>
+            <dt>オオモノ討伐数</dt>
+            <dd><input id="calc-boss" type="number" size="3" min="0"/> 体</dd>
+
+            <dt>オカシラ討伐数</dt>
+            <dd><input id="calc-king" type="number" size="3" min="0"/> 体</dd>
+
+            <dt>金ウロコ</dt>
+            <dd><input id="calc-golden" type="checkbox" /><label for="calc-golden">ゲット！</label></label></dd>
+        </dl>
+
+        <p>　　↓↓↓</p>
+
+        <dl>
+            <dt>加算する討伐数</dt>
+            <dd class="primary"><span id="calc-current"></span> 体</dd>
+        </dl>
+        <div>
+            <button id="add-result" type="button">累計に加算</button>
+            <button id="reset-calc" type="button">加算せずリセット</button>
+        </div>
+
+        <hr />
+
+        <h2>累計討伐</h2>
+        <div class="table-simple">
+            <table>
+                <thead>
+                    <th>只今</th>
+                    <th>目標</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span id="current"></span> 体</td>
+                        <td><span id="goal"></span> 体</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <button id="goal-10" type="button">目標+10</button>
+            <button id="goal-50" type="button">目標+50</button>
+            <button id="goal-100" type="button">目標+100</button>
+        </div>
+
+        <div>
+            <label for="set-current" >只今の値</label>
+            <input id="set-current" type="number" size="6" />
+            <label for="set-goal" >目標の値</label>
+            <input id="set-goal" type="number" size="6" min="0" />
+            <br />
+            <button id="set-result" type="button">累計に代入</button>
+            <button id="reset-result" type="button">ぜんぶリセット</button>
+        </div>
+
+    <hr />
+    <h2>計算ルール</h2>
+    <p>オオモノ討伐数 × [金ウロコGET? 3 : 1] ＋ オカシラ討伐数 × 50 ＋ [オカシラ全討伐? 100 : 0]</p>
+    <p class="weak-text">（編集可能にする時間はありませんでした…）</p>
+    </body>
+
+
+    <script type="module" src="src/rule.js"></script>
+    <script type="module" src="src/container.js"></script>
+    <script type="module" src="src/presenter.js"></script>
+
+</html>
